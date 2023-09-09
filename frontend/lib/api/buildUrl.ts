@@ -1,8 +1,5 @@
 import { compile } from 'path-to-regexp';
 
-import config from 'configs/app';
-
-import isNeedProxy from './isNeedProxy';
 import { RESOURCES } from './resources';
 import type { ApiResource, ResourceName, ResourcePathParams } from './resources';
 
@@ -12,9 +9,8 @@ export default function buildUrl<R extends ResourceName>(
   queryParams?: Record<string, string | Array<string> | number | null | undefined>,
 ): string {
   const resource: ApiResource = RESOURCES[resourceName];
-  const baseUrl = "https://Texplore.ariettachain.tech";
-  const basePath = "";
-  const path = basePath + resource.path;
+  const baseUrl = 'https://backendexplorer.ariettachain.tech';
+  const path = resource.path;
   const url = new URL(compile(path)(pathParams), baseUrl);
 
   queryParams && Object.entries(queryParams).forEach(([ key, value ]) => {
