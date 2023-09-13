@@ -10,7 +10,7 @@
   "scripts": {
     "dev": "next dev",
     "dev:preset": "./tools/scripts/dev.preset.sh",
-    "dev:eth": "./node_modules/.bin/dotenv -e ./configs/envs/.env.eth -e ./configs/envs/.env.secrets -- bash -c 'next dev -- -p \"$NEXT_PUBLIC_APP_PORT\"' | ./node_modules/.bin/pino-pretty",
+    "dev:eth": "./node_modules/.bin/dotenv -e ./configs/envs/.env.eth -e -- bash -c 'next dev -- -p \"$NEXT_PUBLIC_APP_PORT\"' | ./node_modules/.bin/pino-pretty",
     "build": "next build",
     "build:docker": "docker build --build-arg GIT_COMMIT_SHA=$(git rev-parse --short HEAD) --build-arg GIT_TAG=$(git describe --tags --abbrev=0) -t blockscout-frontend ./",
     "start": "./node_modules/.bin/dotenv -e ./configs/envs/.env.eth -e ./configs/envs/.env.secrets -- bash -c 'next start -- -p \"$NEXT_PUBLIC_APP_PORT\"' | ./node_modules/.bin/pino-pretty",

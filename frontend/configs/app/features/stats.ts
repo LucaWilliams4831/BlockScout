@@ -11,6 +11,9 @@ const config: Feature<{ api: { endpoint: string; basePath: string } }> = (() => 
     return Object.freeze({
       title,
       isEnabled: true,
+      method: 'HEAD',
+      mode: 'no-cors',
+      cache: 'no-store',
       api: {
         endpoint: apiEndpoint,
         basePath: '',
