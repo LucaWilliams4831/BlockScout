@@ -30,8 +30,8 @@ services:
       -  ./envs/common-blockscout.env
     environment:
         ETHEREUM_JSONRPC_VARIANT: 'geth'
-        ETHEREUM_JSONRPC_HTTP_URL: https://mainnetrpc.ariettachain.tech/
-        ETHEREUM_JSONRPC_TRACE_URL: https://mainnetrpc.ariettachain.tech/
+        ETHEREUM_JSONRPC_HTTP_URL: https://rpc.cosvm.net/
+        ETHEREUM_JSONRPC_TRACE_URL: https://rpc.cosvm.net/
         DATABASE_URL: postgresql://postgres:@host.docker.internal:7432/blockscout?ssl=false
         ECTO_USE_SSL: 'false'
         SECRET_KEY_BASE: '56NtB48ear7+wMSf0IQuWDAAazhpb31qyc7GiyspBP2vh7t5zlCsF5QDv76chXeN'
