@@ -16,7 +16,7 @@ const Home = () => {
       <Box
         w="100%"
         style={{
-          background: 'linear-gradient(to right, #5d17ec, #0000FF)'
+          background: 'linear-gradient(to right, #543f8d, #aa89ff)'
         }}
         borderRadius="24px"
         padding={{ base: '24px', lg: '48px' }}
